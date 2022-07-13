@@ -14,12 +14,89 @@ public class DojoTest {
   public void test_case_00() {
 
     Solution solution = new Solution();
-    Assert.assertEquals(1, 1);
+
+    int result = solution.nearestPowerOfTwo(2);
+
+    Assert.assertEquals(2, result);
   }
 
-  @Test(expected = RuntimeException.class)
+  @Test
   public void test_case_01() {
 
-    throw new RuntimeException();
+    Solution solution = new Solution();
+
+    int result = solution.nearestPowerOfTwo(1);
+
+    Assert.assertEquals(1, result);
+  }
+
+  @Test
+  public void test_case_02() {
+
+    Solution solution = new Solution();
+
+    int result = solution.nearestPowerOfTwo(4);
+
+    Assert.assertEquals(4, result);
+  }
+
+  @Test
+  public void test_case_03() {
+
+    Solution solution = new Solution();
+
+    int result = solution.nearestPowerOfTwo(8);
+
+    Assert.assertEquals(8, result);
+  }
+
+  @Test
+  public void test_case_04() {
+
+    Solution solution = new Solution();
+
+    int result = solution.nearestPowerOfTwo(16);
+
+    Assert.assertEquals(16, result);
+  }
+
+  @Test
+  public void test_case_05() {
+
+    Solution solution = new Solution();
+
+    int result = solution.nearestPowerOfTwo(15);
+
+    Assert.assertEquals(8, result);
+  }
+
+  @Test
+  public void test_case_06() {
+
+    Solution solution = new Solution();
+
+    int result = solution.nearestPowerOfTwo(10);
+
+    Assert.assertEquals(8, result);
+  }
+
+  @Test
+  public void test_case_07() {
+
+    Solution solution = new Solution();
+
+    int result = solution.nearestPowerOfTwo(17);
+
+    Assert.assertEquals(16, result);
+  }
+
+  @Test
+  public void test_case_08() {
+
+    Solution solution = new Solution();
+
+    int result = solution.nearestPowerOfTwo(31);
+
+    Assert.assertEquals(16, result);
   }
 }
