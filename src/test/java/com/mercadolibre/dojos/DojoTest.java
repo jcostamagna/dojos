@@ -1,5 +1,6 @@
 package com.mercadolibre.dojos;
 
+import java.util.List;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,12 +15,69 @@ public class DojoTest {
   public void test_case_00() {
 
     Solution solution = new Solution();
-    Assert.assertEquals(1, 1);
+
+    boolean result = solution.canReachEnd(List.of(0));
+
+    Assert.assertTrue(result);
   }
 
-  @Test(expected = RuntimeException.class)
+  @Test
   public void test_case_01() {
 
-    throw new RuntimeException();
+    Solution solution = new Solution();
+
+    boolean result = solution.canReachEnd(List.of(1, 2, 3));
+
+    Assert.assertTrue(result);
+  }
+
+  @Test
+  public void test_case_02() {
+
+    Solution solution = new Solution();
+
+    boolean result = solution.canReachEnd(List.of(5, 0, 0, 0, 0, 0));
+
+    Assert.assertTrue(result);
+  }
+
+  @Test
+  public void test_case_03() {
+
+    Solution solution = new Solution();
+
+    boolean result = solution.canReachEnd(List.of(0, 2, 4));
+
+    Assert.assertFalse(result);
+  }
+
+  @Test
+  public void test_case_04() {
+
+    Solution solution = new Solution();
+
+    boolean result = solution.canReachEnd(List.of(1, 2, 0, 0, 1));
+
+    Assert.assertFalse(result);
+  }
+
+  @Test
+  public void test_case_05() {
+
+    Solution solution = new Solution();
+
+    boolean result = solution.canReachEnd(List.of(5, 0, 0, 0, 0, 0, 0));
+
+    Assert.assertFalse(result);
+  }
+
+  @Test
+  public void test_case_06() {
+
+    Solution solution = new Solution();
+
+    boolean result = solution.canReachEnd(List.of(0, 0));
+
+    Assert.assertFalse(result);
   }
 }
